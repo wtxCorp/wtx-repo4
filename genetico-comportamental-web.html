@@ -96,7 +96,7 @@
             try {
                 document.getElementById('loader').style.display = 'block';
                 // Reemplazar esta URL con la URL raw de tu archivo JSON en GitHub
-                const response = await fetch('URL_DE_TU_JSON_EN_GITHUB_RAW');
+                const response = await fetch('https://raw.githubusercontent.com/wtxCorp/wtx-repo4/refs/heads/gh-pages/aspectos-geneticos.json');
                 const data = await response.json();
                 mostrarAspectos(data.aspectos);
             } catch (error) {
