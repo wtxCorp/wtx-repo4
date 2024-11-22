@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspectos Genético-Comportamentales</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #ecf0f1;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .aspectos-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .aspecto-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .aspecto-titulo {
+            color: var(--secondary-color);
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .porcentajes {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .porcentaje {
+            text-align: center;
+            flex: 1;
+        }
+
+        .barra-progreso {
+            height: 20px;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 5px 0;
+        }
+
+        .barra-valor {
+            height: 100%;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .manifestaciones {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+
+        .manifestaciones li {
+            padding: 5px 0;
+            color: var(--primary-color);
+        }
+
+        .loader {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aspectos Genético-Comportamentales</h1>
+    <div id="loader" class="loader">Cargando datos...</div>
+    <div id="aspectos-container" class="aspectos-container"></div>
+
+    <script>
+        async function cargarDatos() {
+            try {
+                document.getElementById('loader').style.display = 'block';
+                // Reemplazar esta URL con la URL raw de tu archivo JSON en GitHub
+                const response = await fetch('URL_DE_TU_JSON_EN_GITHUB_RAW');
+                const data = await response.json();
+                mostrarAspectos(data.aspectos);
+            } catch (error) {
+                console.error('Error al cargar los datos:', error);
+                document.getElementById('aspectos-container').innerHTML = 
+                    '<p>Error al cargar los datos. Por favor, intenta más tarde.</p>';
+            } finally {
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
+
+        function mostrarAspectos(aspectos) {
+            const container = document.getElementById('aspectos-container');
+            container.innerHTML = '';
+
+            aspectos.forEach(aspecto => {
+                const card = document.createElement('div');
+                card.className = 'aspecto-card';
+                
+                const promedioGenetico = (aspecto.herenciaGenetica.porcentajeMin + 
+                    aspecto.herenciaGenetica.porcentajeMax) / 2;
+                const promedioAmbiental = (aspecto.influenciaAmbiental.porcentajeMin + 
+                    aspecto.influenciaAmbiental.porcentajeMax) / 2;
+
+                card.innerHTML = `
+                    <h2 class="aspecto-titulo">${aspecto.nombre}</h2>
+                    <div class="porcentajes">
+                        <div class="porcentaje">
+                            <div>Herencia Genética</div>
+                            <div class="barra-progreso">
+                                <div class="barra-valor" style="width: ${promedioGenetico}%"></div>
+                            </div>
+                            <div>${aspecto.herenciaGenetica.porcentajeMin}-${aspecto.herenciaGenetica.porcentajeMax}%</div>
+                        </div>
+                        <div class="porcentaje">
+                            <div>Influencia Ambiental</div>
+                            <div class="barra-progreso">
+                                <div class="barra-valor" style="width: ${promedioAmbiental}%"></div>
+                            </div>
+                            <div>${aspecto.influenciaAmbiental.porcentajeMin}-${aspecto.influenciaAmbiental.porcentajeMax}%</div>
+                        </div>
+                    </div>
+                    <ul class="manifestaciones">
+                        ${aspecto.manifestaciones.map(m => `<li>${m}</li>`).join('')}
+                    </ul>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarDatos);
+    </script>
+</body>
+</html>

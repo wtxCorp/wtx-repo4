@@ -1,0 +1,213 @@
+{
+  "aspectos": [
+    {
+      "nombre": "Rasgos Físicos",
+      "herenciaGenetica": {
+        "porcentajeMin": 80,
+        "porcentajeMax": 90
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 10,
+        "porcentajeMax": 20
+      },
+      "manifestaciones": [
+        "Color de ojos/pelo",
+        "Estructura facial",
+        "Altura",
+        "Predisposición corporal"
+      ]
+    },
+    {
+      "nombre": "Temperamento",
+      "herenciaGenetica": {
+        "porcentajeMin": 40,
+        "porcentajeMax": 60
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 40,
+        "porcentajeMax": 60
+      },
+      "manifestaciones": [
+        "Nivel de actividad",
+        "Sociabilidad",
+        "Reactividad emocional"
+      ]
+    },
+    {
+      "nombre": "Inteligencia",
+      "herenciaGenetica": {
+        "porcentajeMin": 50,
+        "porcentajeMax": 80
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 20,
+        "porcentajeMax": 50
+      },
+      "manifestaciones": [
+        "Capacidad de aprendizaje",
+        "Habilidades cognitivas",
+        "Talentos específicos"
+      ]
+    },
+    {
+      "nombre": "Personalidad",
+      "herenciaGenetica": {
+        "porcentajeMin": 30,
+        "porcentajeMax": 40
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 60,
+        "porcentajeMax": 70
+      },
+      "manifestaciones": [
+        "Extroversión/introversión",
+        "Hábitos sociales",
+        "Respuestas emocionales"
+      ]
+    },
+    {
+      "nombre": "Valores y Creencias",
+      "herenciaGenetica": {
+        "porcentajeMin": 5,
+        "porcentajeMax": 10
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 90,
+        "porcentajeMax": 95
+      },
+      "manifestaciones": [
+        "Principios morales",
+        "Preferencias culturales",
+        "Ideología"
+      ]
+    },
+    {
+      "nombre": "Comportamiento Social",
+      "herenciaGenetica": {
+        "porcentajeMin": 20,
+        "porcentajeMax": 30
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 70,
+        "porcentajeMax": 80
+      },
+      "manifestaciones": [
+        "Estilo de comunicación",
+        "Habilidades sociales",
+        "Patrones de relación"
+      ]
+    },
+    {
+      "nombre": "Salud Mental",
+      "herenciaGenetica": {
+        "porcentajeMin": 40,
+        "porcentajeMax": 60
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 40,
+        "porcentajeMax": 60
+      },
+      "manifestaciones": [
+        "Predisposición a trastornos",
+        "Resiliencia",
+        "Manejo del estrés"
+      ]
+    },
+    {
+      "nombre": "Hábitos y Rutinas",
+      "herenciaGenetica": {
+        "porcentajeMin": 0,
+        "porcentajeMax": 10
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 90,
+        "porcentajeMax": 100
+      },
+      "manifestaciones": [
+        "Organización personal",
+        "Hábitos alimenticios",
+        "Rutinas diarias"
+      ]
+    },
+    {
+      "nombre": "Propósito",
+      "herenciaGenetica": {
+        "porcentajeMin": 0,
+        "porcentajeMax": 5
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 95,
+        "porcentajeMax": 100
+      },
+      "manifestaciones": [
+        "Metas vitales",
+        "Vocación",
+        "Sentido de vida"
+      ]
+    },
+    {
+      "nombre": "Significado",
+      "herenciaGenetica": {
+        "porcentajeMin": 0,
+        "porcentajeMax": 5
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 95,
+        "porcentajeMax": 100
+      },
+      "manifestaciones": [
+        "Interpretación de experiencias",
+        "Valores existenciales",
+        "Construcción de identidad"
+      ]
+    },
+    {
+      "nombre": "Autonomía",
+      "herenciaGenetica": {
+        "porcentajeMin": 10,
+        "porcentajeMax": 20
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 80,
+        "porcentajeMax": 90
+      },
+      "manifestaciones": [
+        "Toma de decisiones",
+        "Independencia",
+        "Autorregulación"
+      ]
+    },
+    {
+      "nombre": "Motivación",
+      "herenciaGenetica": {
+        "porcentajeMin": 30,
+        "porcentajeMax": 40
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 60,
+        "porcentajeMax": 70
+      },
+      "manifestaciones": [
+        "Impulso hacia metas",
+        "Persistencia",
+        "Intereses personales"
+      ]
+    },
+    {
+      "nombre": "Aprendizaje",
+      "herenciaGenetica": {
+        "porcentajeMin": 40,
+        "porcentajeMax": 50
+      },
+      "influenciaAmbiental": {
+        "porcentajeMin": 50,
+        "porcentajeMax": 60
+      },
+      "manifestaciones": [
+        "Estilos de aprendizaje",
+        "Velocidad de procesamiento",
+        "Estrategias cognitivas"
+      ]
+    }
+  ]
+}
